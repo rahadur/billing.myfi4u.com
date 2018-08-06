@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'popain';
+  src: url('../font/Poppins-Regular.ttf') format('truetype');
+}
+
+html, body {
+    height: 100%;
+    background-color: #f1f2f3;
+    /* background: url('../img/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+
+body {
+  font-family: 'popain', sans-serif;
+}
+
+/* CSS only for examples not required for centering */
+.container {
+    height: 100%;
+}
+
+.card-body > .title {
+  padding: 25px 0px;
+}
