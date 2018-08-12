@@ -15,7 +15,7 @@ require 'database.php';
 
 
 
-if ($_SERVER['REQUEST_METHOD'] == 'post') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($_POST['chap-id'])) {
         header('Location: '. ROUTER_ADDRESS);
