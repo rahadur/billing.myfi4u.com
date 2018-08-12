@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <h4 class="text-center text-success">
                         <strong>৳<?= $package['price'] ?></strong></h4>
                     <p class="text-center">
-                        <strong> <?= $package['limit'] ?> </strong>
+                        <strong> <?= $package['data_limit'] ?> </strong>
                     </p>
                     <p class="text-center"><strong><?= $package['speed'] ?></strong></p>
                     <p class="text-center"><strong><?= $package['validity'] ?></strong></strong></p>
