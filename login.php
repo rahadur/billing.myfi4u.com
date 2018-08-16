@@ -62,7 +62,7 @@ if (isset($_SESSION['router']) && !is_null($_SESSION['router'])){
                         <p class="text-center text-muted">Please Login with your MYFI ID</p>
                     </div>
 
-                    <form class="" action="" method="post">
+                    <form class="" action="secure_login.php" method="post">
 
                         <div class="form-group">
                             <label for="email" class="text-muted">Email</label>

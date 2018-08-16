@@ -65,6 +65,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     }else {
 
+        $password_hash = password_hash($password, PASSWORD_DEFAULT);
+
 
         $query = "INSERT INTO `users` (`name`, `email`, `password`, `phone`, `dob`, `address`, `expired_at`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($link, $query);
@@ -76,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             exit();
         }
 
-        mysqli_stmt_bind_param($stmt, 'sssssssss', $name, $email, $password, $phone, $dob, $address, $expired_at, $created_at, $updated_at);
+        mysqli_stmt_bind_param($stmt, 'sssssssss', $name, $email, $password_hash, $phone, $dob, $address, $expired_at, $created_at, $updated_at);
         mysqli_stmt_execute($stmt);
 
         $user_id = mysqli_insert_id($link);
